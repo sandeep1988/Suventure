@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :confirmable,
          :recoverable, :rememberable, :trackable, :validatable, :authentication_keys => [:login]
 	validates :user_name, presence: true
+  has_many :messages
+
   def login=(login)
     @login = login
   end
@@ -20,5 +22,5 @@ class User < ActiveRecord::Base
       elsif conditions.has_key?(:user_name) || conditions.has_key?(:email)
         where(conditions.to_h).first
       end
-    end
+  end
 end
