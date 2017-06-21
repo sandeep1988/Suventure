@@ -10,10 +10,8 @@ test:
   pool: 5
   timeout: 5000
 
-development:
+production:
   adapter: postgresql
-  encoding: unicode
-  database: blog_development
+  database: chore_app_production
   pool: 5
-  username: postgres
-  password: postgres
+  timeout: 5000
