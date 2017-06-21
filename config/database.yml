@@ -11,5 +11,7 @@ test:
   timeout: 5000
 
 production:
-  <<: *default
-  database: db/production.sqlite3
+  adapter: postgresql
+  database: chore_app_production
+  pool: 5
+  timeout: 5000
