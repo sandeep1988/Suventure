@@ -12,6 +12,8 @@ test:
 
 production:
   adapter: postgresql
-  database: treebook
+  encoding: unicode
+  database: test_development
   pool: 5
-  timeout: 5000
+  username: root
+  password:
